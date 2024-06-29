@@ -20,7 +20,7 @@ pipeline{
         }
         stage('disk details'){
             steps{
-                sh"df -kh"
+                sh'echo "df -kh"'
             }
         }
     }
