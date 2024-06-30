@@ -21,11 +21,5 @@ pipeline{
                 sh "df -kh"
             }
         }
-        stage('top'){
-            steps{
-                sh "ps -eaf | head -10"
-            }
-        }
-
     }
 }
