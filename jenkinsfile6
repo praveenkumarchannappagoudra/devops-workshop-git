@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+    stages{
+        stage('test'){
+            steps{
+                sh 'echo "hello guys how are you" '
+            }
+        }
+    }
+}
+
+pipeline {
+    agent any 
+    stages {
+        stage('hostname') { 
+            steps {
+                sh '"hostname"'
+            }
+        }
+
+        stage('server details') { 
+            steps {
+                sh '"uname -a" '
+            }
+        }
+        stage('memory') { 
+            steps {
+                sh '"free -h"'
+            }
+        }
+        stage('dish details'){
+            steps{
+                sh '"df -kh"'
+
+            }
+        }
+    }
+    
+}
